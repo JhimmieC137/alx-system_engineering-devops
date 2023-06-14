@@ -1,3 +1,2 @@
 #!/bin/bash
-NUM=1.11
 echo "$NUM"
