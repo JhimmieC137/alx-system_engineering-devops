@@ -1,0 +1,7 @@
+# In this distributed web infrastructure, another server is added for redundancy, to reduce the traffic of requests and responses. 
+#A HAproxy load-balancer is used along with the Round Robin Schedulingalgorithm. In this algorithm, requests are served by the server sequentially one after another. 
+After sending the request to the last server, it starts from the first server again. 
+#The single point of failure in this infrastucture is the database service. If connection to the single database fails, the business might incur losses. 
+#Also there is no monitoring or log shipping added to have a record of different actions on each of the servers to keep up to date with.
+#There are also to firewalls implemented to filter requests comming in through the proxy.
+
