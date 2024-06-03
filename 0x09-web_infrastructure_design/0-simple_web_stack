@@ -1,10 +1,15 @@
 #The user enters the web address www.foobar.com in a url input box of a 
 #browser application/software and on pressing enter, 
 #this sends a request through the internet to the nearest nameserver. 
-#The DNS at nameserver gets the IP address represented by the domain name foobar.com and
-#redirects the request to that address. 
-#At the IP address the web server NGINX will filter and direct the request to the appropriate port on the server. 
-#The server, guided by the specified rules and logic from the application prgramming interface(API) 
-#from the application files on the server will retrive the required data from the database 
+#The "www" is a DNS CNAME record and is used, at nameserver, to get the IP address represented by the domain name foobar.com and the namserver redirects the request to that address. 
+#A domain name is a name registered at a nameserver to represent a specific IP address. 
+#At the IP address the web server NGINX, whose role is to take requests to the server and return data as responses, will filter and direct the request to the appropriate port on the server. 
+#The server, guided by the specified rules and logic from the application files on application server whose role is to store the program written in the application files will retrive the required data from the database	 	
 #and return a response all the way through the same channels the request came, 
-#back to the browser as an html webpage with the requested data.
+#back to the browser as an html webpage with the requested data. 
+#The server communicates with the browser using data packets which contain data about request and response.
+#
+#This single server in this infrasstructure is the SPOF because both planned and uplanned downtime will result in total unavailability of data throught the downtime (i.e no redundancy provided).
+#Downtime when maintenance needed (like deploying new code web server needs to be restarted) is referred to as Planned downtime and can lead to loss in businesses that need to be constantly available.
+#This infrastructure will also fail if too much traffic is incurred due to lack of redundancy(i.e another server to reduce traffic by assisting in handling requests)
+#
