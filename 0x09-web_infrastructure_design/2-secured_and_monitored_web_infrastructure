@@ -1,0 +1,4 @@
+#Here, 3 firewalls are added to restrict data packets that are not in accordance with certain constraintraints.
+The SSL certificate contains the public key needed to begin the secureession. Traffic is served over the https because it is secured/encrypted.
+
+Monitoring is used to detect and record events of request, responses and actions on the server side.
