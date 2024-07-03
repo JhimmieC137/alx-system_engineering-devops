@@ -7,7 +7,7 @@ ufw allow 'Nginx HTTP'
 
 apt-get install curl -y
 
-sudo chown -R ubuntu /var/www
+sudo chown -R  $USER:$USER /var/www
 chmod 777 /var/www/html/index.nginx-debian.html
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
