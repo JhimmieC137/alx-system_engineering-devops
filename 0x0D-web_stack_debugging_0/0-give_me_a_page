@@ -1,3 +1,13 @@
 #!/usr/bin/env bash
 
-docker exec -d 23ff9638ea41 service apache2 start
+IMAGE_NAME="holbertonschool/265-0"
+COMMAND="/bin/bash"
+
+# Find the container ID or name
+CONTAINER_ID=$(docker ps --filter ancestor=$IMAGE_NAME --format "{{.ID}}")
+
+if [ -n "$CONTAINER_ID" ]; then
+    docker exec -d $CONTAINER_ID service apache2 start
+else
+    echo "No running containers found for image: $IMAGE_NAME"
+fi
