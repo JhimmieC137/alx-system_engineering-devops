@@ -2,9 +2,6 @@
 
 apt-get update -y
 apt-get install nginx -y
-
-ufw allow 'Nginx HTTP'
-
 apt-get install curl -y
 
 sudo chown -R  $USER:$USER /var/www
