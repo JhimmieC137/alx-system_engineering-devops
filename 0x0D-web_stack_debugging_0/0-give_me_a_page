@@ -1,5 +1,1 @@
-#!/usr/bin/env bash
-
-# Fix my server with these magic 1 lines
-
-ervice apache2 start
+service apache2 start
